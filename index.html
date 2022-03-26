@@ -30,13 +30,14 @@
         .dot {
             background-color: #1a2b3c;
             margin-right: 100px;
+            min-width: 100px;
             width: 100px;
             height: 100px;
         }
 
         .card {
             display: flex;
-
+            flex-direction: column;
             text-decoration: none;
             background-color: white;
             padding: 25px;
@@ -46,6 +47,8 @@
 
         .card img {
             margin-right: 25px;
+            width: 128px;
+            height: 128px;
         }
 
         @media only screen and (min-width: 800px) {
@@ -55,6 +58,10 @@
 
             .flex {
                 display: flex;
+            }
+
+            .card {
+                flex-direction: row;
             }
         }
     </style>
@@ -94,11 +101,13 @@
             </a>
         </main>
     </div>
+    <br /><br /><br /><br /><br />
     <footer>
-	<strong>I plan on making more things. Follow here:</strong><br />
-	    YouTube: <a href="https://www.youtube.com/channel/UCH-wezUdB6X56axOvKmWB1g" target="_blank">YouTube</a><br />
+        <strong>I plan on making more things. Follow here:</strong><br />
+        YouTube: <a href="https://www.youtube.com/channel/UCH-wezUdB6X56axOvKmWB1g" target="_blank">YouTube</a><br />
         Twitter: <a href="https://twitter.com/DotEyeOnline" target="_blank">@DotEyeOnline</a><br />
-        Reddit: <a href="https://reddit.com/u/DotEyeOnline" target="_blank">u/DotEyeOnline</a>
+        Reddit: <a href="https://reddit.com/u/DotEyeOnline" target="_blank">u/DotEyeOnline</a><br />
+        TikTok: <a href="https://www.tiktok.com/@doteyeonline" target="_blank">@DotEyeOnline</a>
     </footer>
 </body>
 </html>
