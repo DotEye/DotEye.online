@@ -1,0 +1,63 @@
+* {
+    color: #1a2b3c;
+}
+
+body {
+    background-color: #d07e9e;
+    font-family: 'Roboto Mono', monospace;
+    margin: 25px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #d07e9e;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+}
+
+.dot {
+    background-color: #1a2b3c;
+    margin-right: 100px;
+    min-width: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.card .card-image {
+    margin-right: 25px;
+    width: 128px;
+    height: 128px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        margin: 100px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .card {
+        flex-direction: row;
+    }
+}

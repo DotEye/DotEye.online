@@ -3,68 +3,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            color: #1a2b3c;
-        }
-
-        body {
-            background-color: #d07e9e;
-            font-family: 'Roboto Mono', monospace;
-            margin: 25px;
-        }
-
-        main {
-            flex-grow: 1;
-        }
-
-        footer {
-            background-color: #d07e9e;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            padding: 5px;
-        }
-
-        .dot {
-            background-color: #1a2b3c;
-            margin-right: 100px;
-            min-width: 100px;
-            width: 100px;
-            height: 100px;
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            background-color: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-        }
-
-        .card img {
-            margin-right: 25px;
-            width: 128px;
-            height: 128px;
-        }
-
-        @media only screen and (min-width: 800px) {
-            body {
-                margin: 100px;
-            }
-
-            .flex {
-                display: flex;
-            }
-
-            .card {
-                flex-direction: row;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
@@ -85,15 +24,22 @@
         <div class="dot"></div>
         <main>
             <h1>.i</h1>
+            <a href="projects/mclob" class="card">
+                <img src="icons/mclob.png" alt="Minecraft Library of Babel" class="card-image">
+                <div>
+                    <h3>Minecraft Library of Babel</h3>
+                    <p>A working version of the Library of Babel created in Minecraft.</p>
+                </div>
+            </a>
             <a href="https://adverswordle.doteye.online" class="card" target="_blank">
-                <img src="icons/adverswordle.png" alt="Adverswordle">
+                <img src="icons/adverswordle.png" alt="Adverswordle" class="card-image">
                 <div>
                     <h3>Adverswordle</h3>
                     <p>Adverswordle is Wordle but backwards. A free online word game.</p>
                 </div>
             </a>
             <a href="https://amogus.doteye.online" class="card" target="_blank">
-                <img src="icons/amogus.png" alt="Amogus">
+                <img src="icons/amogus.png" alt="Amogus" class="card-image">
                 <div>
                     <h3>Amogus</h3>
                     <p>An interactive shitpost.</p>

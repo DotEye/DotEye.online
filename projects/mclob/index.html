@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>.i - Minecraft Library of Babel</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KSEP8CQCP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7KSEP8CQCP');
+    </script>
+</head>
+<body>
+<div class="flex">
+    <div class="dot"></div>
+    <main>
+        <a href="/">Back</a>
+        <h1>Minecraft Library of Babel</h1>
+        <div class="card">
+            <div>
+                <img src="screenshot.jpg" width="100%" alt="Minecraft Library of Babel">
+                <p>The Minecraft Library of Babel is a library that spans an entire minecraft world.
+                    It contains every possible combination of <strong>15 characters</strong>.
+                    That's over <strong>100 quintillion</strong> books (1 followed by 20 zeros).</p>
+
+                <h3>How do I browse it?</h3>
+                <p>A world download would be approximately <a href="https://www.reddit.com/r/Minecraft/comments/4n4605/comment/d40qbsi" target="_blank">400 petabytes</a> in size,
+                    so instead you need to use a custom Minecraft server. You can download the source code for this server <a href="https://github.com/DotEye/Minecraft-Library-of-Babel" target="_blank">here</a>,
+                    or join this server which will be hosting the world 24/7: <strong>mclob.doteye.online</strong> (currently on Java version 1.18.2).</p>
+                <p>You will be placed in a random part of the library.
+                    Right click on a bookshelf to open it and take out books.
+                    The books will respawn so don't worry about putting them back.
+                    Type <strong>/help</strong> for a list of commands.
+                    The most useful command will be <strong>/search</strong>, which lets you find where a specific page is located in the library.</p>
+
+                <h3>Inspiration</h3>
+                <p>This project is heavily inspired by:</p>
+                <ul>
+                    <li>The short story <a href="https://en.wikipedia.org/wiki/The_Library_of_Babel" target="_blank">"The Library of Babel" by Jorge Luis Borges</a></li>
+                    <li>The <a href="https://libraryofbabel.info" target="_blank">libraryofbabel.info</a> website developed by <a href="https://jonathanbasile.info/" target="_blank">Jonathan Basile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Trailer</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FOLB2Bq6ADI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>FAQ</h2>
+                <h3>How does this work?</h3>
+                <p>Each time you open a bookshelf, the server uses a special algorithm to convert the coordinates of the bookshelf into a series of books.
+                    The algorithm ensures two things:</p>
+                    <ol>
+                        <li>The same bookshelf always contains the same books.</li>
+                        <li>No other bookshelfs will generate the same pages.</li>
+                    </ol>
+                <p>This way, the pages are never actually stored on the server (that would take up too much space).
+                    Instead, they are generated on the fly.</p>
+                <p>Feel free to browse the source code here: <a href="https://github.com/DotEye/Minecraft-Library-of-Babel" target="_blank">https://github.com/DotEye/Minecraft-Library-of-Babel</a></p>
+                <h3>Why only 15 characters per page?</h3>
+                <p>Even though Minecraft worlds are so big, they're only big enough to fit all 15 character books.
+                    If I tried to fit all 16 character books, I would need to store 27 times as many books and there simply is not enough space in a full Minecraft world for that.</p>
+                <h3>Why do other players rarely move?</h3>
+                <p>In order to reduce lag and support the most amount of players on the server at the same time, player position updates are done at very rarely.</p>
+                <h3>Why can't I do _____ on this server?</h3>
+                <p>In order to reduce lag and support the most amount of players on the server at the same time, many common Minecraft features are not available including throwing items and syncing player state.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div>
+                <h2>Search Tools</h2>
+                <p>Also see the search tools site here: <a href="https://mclob-tools.doteye.online" target="_blank">https://mclob-tools.doteye.online</a></p>
+            </div>
+        </div>
+    </main>
+</div>
+<br /><br /><br /><br /><br />
+<footer>
+    <strong>I plan on making more things. Follow here:</strong><br />
+    YouTube: <a href="https://www.youtube.com/channel/UCH-wezUdB6X56axOvKmWB1g" target="_blank">YouTube</a><br />
+    Twitter: <a href="https://twitter.com/DotEyeOnline" target="_blank">@DotEyeOnline</a><br />
+    Reddit: <a href="https://reddit.com/u/DotEyeOnline" target="_blank">u/DotEyeOnline</a><br />
+    TikTok: <a href="https://www.tiktok.com/@doteyeonline" target="_blank">@DotEyeOnline</a>
+</footer>
+</body>
+</html>
