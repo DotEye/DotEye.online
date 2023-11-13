@@ -9,181 +9,16 @@
     <meta property="og:url" content="https://doteye.online">
     <meta property="og:title" content=".i | Official Site">
     <meta property="og:description" content="The homepage of .i, containing a list of his projects. .i writes and publishes software that he thinks you'll find cool.">
-    <meta property="og:image" content="ogImage.png">
-    <link rel="icon" href="favicon.png">
+    <meta property="og:image" content="assets/ogImage.png">
+    <link rel="icon" href="assets/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
-    <link rel="preload" as="image" href="assets/bg_tohse.jpg">
-    <link rel="preload" as="image" href="assets/bg_mclob.jpg">
-    <link rel="preload" as="image" href="assets/bg_adverswordle.jpg">
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="preload" as="image" href="assets/backgrounds/1x1.png">
+    <link rel="preload" as="image" href="assets/backgrounds/bg_tohse.jpg">
+    <link rel="preload" as="image" href="assets/backgrounds/bg_mclob.jpg">
+    <link rel="preload" as="image" href="assets/backgrounds/bg_adverswordle.jpg">
     <title>.i | Official Site</title>
-
-    <style>
-        * {
-            font-family: 'Roboto Mono', monospace;
-            color: #1a2b3c;
-        }
-
-        body {
-            margin: 0;
-            background-color: black;
-        }
-
-        aside {
-            position: fixed;
-            width: 40vw;
-            height: 100dvh;
-            z-index: -1;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        aside img, video, iframe {
-            opacity: 0;
-            transition: 0.5s;
-            box-shadow: 0 0 5px white;
-            position: absolute;
-        }
-
-        header .scroll-target, footer .scroll-target {
-            margin: 0 10% 0 40%;
-            height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        main {
-            margin: 0 calc((40% - min(30vw, 300px)) / 2) 0 40%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        h1 {
-            font-size: 96px;
-        }
-
-        h2 {
-            margin: 0 0 10px 0;
-        }
-
-        h1, h3, h4, h5, h6, p {
-            margin: 0;
-        }
-
-        a, button {
-            border: none;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        a img, button img {
-            position: relative;
-            top: 0.5px;
-        }
-
-        .navigation-buttons {
-            display: flex;
-            justify-content: end;
-            margin: 10px 0;
-            gap: 10px;
-        }
-
-        .youtube-button {
-            background-color: red;
-            color: white;
-        }
-
-        .github-button {
-            background-color: #333;
-            color: white;
-        }
-
-        .goto-button {
-            background-color: #1a2b3c;
-            color: white;
-        }
-
-        .actions {
-            display: flex;
-            margin-top: 15px;
-            gap: 5px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .background {
-            position: fixed;
-            width: 100vw;
-            height: 100dvh;
-            z-index: -1;
-            background-repeat: no-repeat;
-            background-image: url('assets/1x1.png');
-            background-attachment: fixed;
-            background-size: cover;
-            background-blend-mode: unset;
-            transition: 0.5s;
-            filter: blur(5px);
-        }
-
-        .eye {
-            position: relative;
-            background-color: #1a2b3c;
-            width: min(50vw, 300px);
-            height: min(50vw, 300px);
-        }
-
-        .project {
-            height: 100dvh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card {
-            background-color: white;
-            padding: 25px;
-            position: relative;
-        }
-
-        @media only screen and (max-width: 800px) {
-            aside {
-                width: 100vw;
-                justify-content: start;
-                margin-top: 25px;
-            }
-
-            main {
-                margin: 0;
-            }
-
-            header .scroll-target, main .scroll-target {
-                margin: 0;
-                padding: 100px 25px 0 25px;
-            }
-
-            footer .scroll-target {
-                margin: 0;
-                padding: 100px 25px 0 25px;
-            }
-
-            h1 {
-                font-size: 48px;
-            }
-        }
-    </style>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KSEP8CQCP"></script>
     <script>
@@ -199,13 +34,13 @@
 <aside>
     <div class="eye">
         <video id="tohse-video" width="100%" height="100%" loop muted playsinline poster="assets/thumbnails/tohse_thumb.jpg">
-            <source src="assets/preview_tohse.webm" type="video/webm">
+            <source src="assets/videos/preview_tohse.webm" type="video/webm">
         </video>
         <video id="mclob-video" width="100%" height="100%" loop muted playsinline poster="assets/thumbnails/mclob_thumb.jpg">
-            <source src="assets/preview_mclob.webm" type="video/webm">
+            <source src="assets/videos/preview_mclob.webm" type="video/webm">
         </video>
         <video id="adverswordle-video" width="100%" height="100%" loop muted playsinline poster="assets/thumbnails/adverswordle_thumb.jpg">
-            <source src="assets/preview_adverswordle.webm" type="video/webm">
+            <source src="assets/videos/preview_adverswordle.webm" type="video/webm">
         </video>
     </div>
 </aside>
@@ -302,9 +137,9 @@
 
 <script>
     const IFRAME_HTML = `
-        <img src="assets/preview_tohse.webp" width="100%" height="100%" alt="Towers of Hanoi - Speedrun Edition" />
-        <img src="assets/preview_mclob.webp" width="100%" height="100%" alt="Minecraft Library of Babel" />
-        <img src="assets/preview_adverswordle.webp" width="100%" height="100%" alt="Adverswordle" />
+        <img src="assets/videos/preview_tohse.webp" width="100%" height="100%" alt="Towers of Hanoi - Speedrun Edition" />
+        <img src="assets/videos/preview_mclob.webp" width="100%" height="100%" alt="Minecraft Library of Babel" />
+        <img src="assets/videos/preview_adverswordle.webp" width="100%" height="100%" alt="Adverswordle" />
     `;
     const BACKGROUND_IMAGES = ['1x1.png', 'bg_tohse.jpg', 'bg_mclob.jpg', 'bg_adverswordle.jpg', '1x1.png'];
 
@@ -321,7 +156,7 @@
     window.addEventListener('scroll', () => {
         const scrollIndex = getScrollIndex();
 
-        backgroundElement.style.backgroundImage = `url("assets/${BACKGROUND_IMAGES[scrollIndex]}`;
+        backgroundElement.style.backgroundImage = `url("assets/backgrounds/${BACKGROUND_IMAGES[scrollIndex]}")`;
         videoElements.forEach(videoElement => {
             videoElement.style.opacity = '0';
             videoElement.pause?.();

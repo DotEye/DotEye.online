@@ -1,0 +1,164 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+    color: #1a2b3c;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+aside {
+    position: fixed;
+    width: 40vw;
+    height: 100dvh;
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+aside img, video, iframe {
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0 0 5px white;
+    position: absolute;
+}
+
+header .scroll-target, footer .scroll-target {
+    margin: 0 10% 0 40%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    margin: 0 calc((40% - min(30vw, 300px)) / 2) 0 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h1 {
+    font-size: 96px;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+}
+
+h1, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a, button {
+    border: none;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+a img, button img {
+    position: relative;
+    top: 0.5px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: end;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.youtube-button {
+    background-color: red;
+    color: white;
+}
+
+.github-button {
+    background-color: #333;
+    color: white;
+}
+
+.goto-button {
+    background-color: #1a2b3c;
+    color: white;
+}
+
+.actions {
+    display: flex;
+    margin-top: 15px;
+    gap: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100dvh;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-image: url('./backgrounds/1x1.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: unset;
+    transition: 0.5s;
+    filter: blur(5px);
+}
+
+.eye {
+    position: relative;
+    background-color: #1a2b3c;
+    width: min(50vw, 300px);
+    height: min(50vw, 300px);
+}
+
+.project {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    position: relative;
+}
+
+@media only screen and (max-width: 800px) {
+    aside {
+        width: 100vw;
+        justify-content: start;
+        margin-top: 25px;
+    }
+
+    main {
+        margin: 0;
+    }
+
+    header .scroll-target, main .scroll-target {
+        margin: 0;
+        padding: 100px 25px 0 25px;
+    }
+
+    footer .scroll-target {
+        margin: 0;
+        padding: 100px 25px 0 25px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+}
