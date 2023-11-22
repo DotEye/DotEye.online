@@ -11,26 +11,26 @@ body {
 aside {
     position: fixed;
     width: 40vw;
-    height: 100dvh;
+    height: 100vh;
     z-index: -1;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    perspective: 300px;
+    perspective-origin: center;
 }
 
 aside img, video, iframe {
     opacity: 0;
     transition: 0.5s;
-    box-shadow: 0 0 5px white;
     position: absolute;
 }
 
 header .scroll-target, footer .scroll-target {
     margin: 0 10% 0 40%;
-    height: 100dvh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,10 +106,10 @@ a img, button img {
 .background {
     position: fixed;
     width: 100vw;
-    height: 100dvh;
+    height: 100vh;
     z-index: -1;
     background-repeat: no-repeat;
-    background-image: url('./backgrounds/1x1.png');
+    background-image: url('/assets/backgrounds/default.png');
     background-attachment: fixed;
     background-size: cover;
     background-blend-mode: unset;
@@ -117,15 +117,40 @@ a img, button img {
     filter: blur(5px);
 }
 
-.eye {
+.eye-wrapper {
     position: relative;
+    width: min(50vw, 300px);
+    height: min(50vw, 300px);
+    transition: 0.5s;
+}
+
+.eye-background {
+    position: absolute;
+    width: min(50vw, 300px);
+    height: min(50vw, 300px);
+    background-color: #ffffffbf;
+    box-shadow: 0 0 50px #ffffdf, inset 0 0 50px #ffffdf;
+    filter: url(#glow) blur(1px);
+    top: -15px;
+    left: -15px;
+}
+
+.eye-background:nth-child(2) {
+    transform: scale(-100%, -100%);
+    box-shadow: 0 0 50px #ffffdf, inset 0 0 50px #ffffdf;
+    top: 15px;
+    left: 15px;
+}
+
+.eye {
+    position: absolute;
     background-color: #1a2b3c;
     width: min(50vw, 300px);
     height: min(50vw, 300px);
 }
 
 .project {
-    height: 100dvh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,5 +185,11 @@ a img, button img {
 
     h1 {
         font-size: 48px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .rotated {
+        transform: rotateY(10deg);
     }
 }

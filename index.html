@@ -9,15 +9,15 @@
     <meta property="og:url" content="https://doteye.online">
     <meta property="og:title" content=".i | Official Site">
     <meta property="og:description" content="The homepage of .i, containing a list of his projects. .i writes and publishes software that he thinks you'll find cool.">
-    <meta property="og:image" content="assets/ogImage.png">
-    <link rel="icon" href="assets/favicon.png">
+    <meta property="og:image" content="/assets/ogImage.png">
+    <link rel="icon" href="/assets/favicon.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
-    <link rel="stylesheet" href="assets/index.css">
-    <link rel="preload" as="image" href="assets/backgrounds/1x1.png">
-    <link rel="preload" as="image" href="assets/backgrounds/bg_tohse.jpg">
-    <link rel="preload" as="image" href="assets/backgrounds/bg_mclob.jpg">
-    <link rel="preload" as="image" href="assets/backgrounds/bg_adverswordle.jpg">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    <link rel="preload" as="image" href="/assets/backgrounds/default.png">
+    <link rel="preload" as="image" href="/assets/backgrounds/bg_tohse.jpg">
+    <link rel="preload" as="image" href="/assets/backgrounds/bg_mclob.jpg">
+    <link rel="preload" as="image" href="/assets/backgrounds/bg_adverswordle.jpg">
     <title>.i | Official Site</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7KSEP8CQCP"></script>
@@ -32,17 +32,29 @@
 <body>
 <div class="background"></div>
 <aside>
-    <div class="eye">
-        <video id="tohse-video" width="100%" height="100%" loop muted playsinline poster="assets/thumbnails/tohse_thumb.jpg">
-            <source src="assets/videos/preview_tohse.webm" type="video/webm">
-        </video>
-        <video id="mclob-video" width="100%" height="100%" loop muted playsinline poster="assets/thumbnails/mclob_thumb.jpg">
-            <source src="assets/videos/preview_mclob.webm" type="video/webm">
-        </video>
-        <video id="adverswordle-video" width="100%" height="100%" loop muted playsinline poster="assets/thumbnails/adverswordle_thumb.jpg">
-            <source src="assets/videos/preview_adverswordle.webm" type="video/webm">
-        </video>
+    <div class="eye-wrapper">
+        <div class="eye-background"></div>
+        <div class="eye-background"></div>
+        <div class="eye">
+            <video id="tohse-video" width="100%" height="100%" loop muted playsinline poster="/assets/thumbnails/tohse_thumb.jpg">
+                <source src="/assets/videos/preview_tohse.webm" type="video/webm">
+            </video>
+            <video id="mclob-video" width="100%" height="100%" loop muted playsinline poster="/assets/thumbnails/mclob_thumb.jpg">
+                <source src="/assets/videos/preview_mclob.webm" type="video/webm">
+            </video>
+            <video id="adverswordle-video" width="100%" height="100%" loop muted playsinline poster="/assets/thumbnails/adverswordle_thumb.jpg">
+                <source src="/assets/videos/preview_adverswordle.webm" type="video/webm">
+            </video>
+        </div>
     </div>
+    <svg width="0" height="0">
+        <filter id="glow">
+            <feTurbulence type="turbulence" numOctaves="1" result="turbulence">
+                <animate attributeName="baseFrequency" dur="45s" values="0.02; 0.005; 0.02" repeatCount="indefinite" />
+            </feTurbulence>
+            <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="50" />
+        </filter>
+    </svg>
 </aside>
 <header>
     <div class="scroll-target">
@@ -52,25 +64,25 @@
             <button class="goto-button" onclick="nextProject()">View Projects</button>
         </div>
         <div class="actions">
-            <a href="https://www.youtube.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="assets/social/youtube.svg" alt="YouTube" /></a>
-            <a href="https://www.tiktok.com/@doteyeonline" target="_blank"><img width="25" height="25" src="assets/social/tiktok.svg" alt="TikTok" /></a>
-            <a href="https://discord.gg/tykwEuuYCt" target="_blank"><img width="25" height="25" src="assets/social/discord.svg" alt="Discord" /></a>
-            <a href="https://reddit.com/u/DotEyeOnline" target="_blank"><img width="25" height="25" src="assets/social/reddit.svg" alt="Reddit" /></a>
-            <a href="https://twitter.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="assets/social/x.svg" alt="X" /></a>
-            <a href="https://github.com/DotEye" target="_blank"><img width="25" height="25" src="assets/social/github.svg" alt="GitHub" /></a>
+            <a href="https://www.youtube.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="/assets/social/youtube.svg" alt="YouTube" /></a>
+            <a href="https://www.tiktok.com/@doteyeonline" target="_blank"><img width="25" height="25" src="/assets/social/tiktok.svg" alt="TikTok" /></a>
+            <a href="https://discord.gg/tykwEuuYCt" target="_blank"><img width="25" height="25" src="/assets/social/discord.svg" alt="Discord" /></a>
+            <a href="https://reddit.com/u/DotEyeOnline" target="_blank"><img width="25" height="25" src="/assets/social/reddit.svg" alt="Reddit" /></a>
+            <a href="https://twitter.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="/assets/social/x.svg" alt="X" /></a>
+            <a href="https://github.com/DotEye" target="_blank"><img width="25" height="25" src="/assets/social/github.svg" alt="GitHub" /></a>
         </div>
     </div>
 </header>
 <main>
     <div class="scroll-target">
-        <div class="project">
+        <div class="project" itemscope itemtype="https://schema.org/VideoGame">
             <div class="card">
-                <h2>Towers of Hanoi - Speedrun Edition</h2>
-                <p>A highly customizable online version of Towers of Hanoi, where the controls are optimized for speed. Featuring a precise timer, high score tracker, and blindfold mode.</p>
+                <h2 itemprop="name">Towers of Hanoi - Speedrun Edition</h2>
+                <p itemprop="description">A highly customizable online version of Towers of Hanoi, where the controls are optimized for speed. Featuring a precise timer, high score tracker, and blindfold mode.</p>
                 <div class="actions">
-                    <a class="goto-button" href="https://towers.doteye.online" target="_blank">Launch <img width="15" height="15" src="assets/icons/rocket.svg" alt="Launch" /></a>
-                    <a class="youtube-button" href="https://youtu.be/3em6gaMaQ54" target="_blank">Trailer <img width="15" height="15" src="assets/icons/youtube.svg" alt="View on YouTube" /></a>
-                    <a class="github-button" href="https://github.com/DotEye/Towers-Of-Hanoi-Speedrun-Edition" target="_blank">Source Code <img width="15" height="15" src="assets/icons/github.svg" alt="View on GitHub" /></a>
+                    <a class="goto-button" href="https://towers.doteye.online" target="_blank">Launch <img width="15" height="15" src="/assets/icons/rocket.svg" alt="Launch" /></a>
+                    <a class="youtube-button" href="https://youtu.be/3em6gaMaQ54" target="_blank">Trailer <img width="15" height="15" src="/assets/icons/youtube.svg" alt="View on YouTube" /></a>
+                    <a class="github-button" href="https://github.com/DotEye/Towers-Of-Hanoi-Speedrun-Edition" target="_blank">Source Code <img width="15" height="15" src="/assets/icons/github.svg" alt="View on GitHub" /></a>
                 </div>
             </div>
             <div class="navigation-buttons">
@@ -80,15 +92,15 @@
         </div>
     </div>
     <div class="scroll-target">
-        <div class="project">
+        <div class="project" itemscope itemtype="https://schema.org/VideoGame">
             <div class="card">
-                <h2>The Minecraft Library of Babel</h2>
-                <p>A virtual library spanning an entire Minecraft world containing every possible 15 character page. Made possible by a custom-built server.</p>
+                <h2 itemprop="name">The Minecraft Library of Babel</h2>
+                <p itemprop="description">A virtual library spanning an entire Minecraft world containing every possible 15 character page. Made possible by a custom-built server.</p>
                 <div class="actions">
-                    <a class="goto-button" href="projects/mclob ">More Info <img width="15" height="15" src="assets/icons/info.svg" alt="Open page" /></a>
-                    <a class="youtube-button" href="https://youtu.be/FOLB2Bq6ADI" target="_blank">Trailer <img width="15" height="15" src="assets/icons/youtube.svg" alt="View on YouTube" /></a>
-                    <a class="youtube-button" href="https://youtu.be/WFFi9zVtvsw" target="_blank">How it Works <img width="15" height="15" src="assets/icons/youtube.svg" alt="View on YouTube" /></a>
-                    <a class="github-button" href="https://github.com/DotEye/Minecraft-Library-of-Babel" target="_blank">Source Code <img width="15" height="15" src="assets/icons/github.svg" alt="View on GitHub" /></a>
+                    <a class="goto-button" href="projects/mclob" itemprop="url">More Info <img width="15" height="15" src="/assets/icons/info.svg" alt="Open page" /></a>
+                    <a class="youtube-button" href="https://youtu.be/FOLB2Bq6ADI" target="_blank">Trailer <img width="15" height="15" src="/assets/icons/youtube.svg" alt="View on YouTube" /></a>
+                    <a class="youtube-button" href="https://youtu.be/WFFi9zVtvsw" target="_blank">How it Works <img width="15" height="15" src="/assets/icons/youtube.svg" alt="View on YouTube" /></a>
+                    <a class="github-button" href="https://github.com/DotEye/Minecraft-Library-of-Babel" target="_blank">Source Code <img width="15" height="15" src="/assets/icons/github.svg" alt="View on GitHub" /></a>
                 </div>
             </div>
             <div class="navigation-buttons">
@@ -98,14 +110,14 @@
         </div>
     </div>
     <div class="scroll-target">
-        <div class="project">
+        <div class="project" itemscope itemtype="https://schema.org/VideoGame">
             <div class="card">
-                <h2>Adverswordle</h2>
-                    <p>An online word game where an AI guesses the word you are thinking of. It's like Wordle, but backwards.</p>
+                <h2 itemprop="name">Adverswordle</h2>
+                <p itemprop="description">An online word game where an AI guesses the word you are thinking of. It's like Wordle, but backwards.</p>
                 <div class="actions">
-                    <a class="goto-button" href="https://adverswordle.doteye.online" target="_blank">Launch <img width="15" height="15" src="assets/icons/rocket.svg" alt="Launch" /></a>
-                    <a class="youtube-button" href="https://youtube.com/shorts/FDeQRM9FPVU" target="_blank">Trailer <img width="15" height="15" src="assets/icons/youtube.svg" alt="View on YouTube" /></a>
-                    <a class="github-button" href="https://github.com/DotEye/Adverswordle" target="_blank">Source Code <img width="15" height="15" src="assets/icons/github.svg" alt="View on GitHub" /></a>
+                    <a class="goto-button" href="https://adverswordle.doteye.online" target="_blank" itemprop="url">Launch <img width="15" height="15" src="/assets/icons/rocket.svg" alt="Launch" /></a>
+                    <a class="youtube-button" href="https://youtube.com/shorts/FDeQRM9FPVU" target="_blank">Trailer <img width="15" height="15" src="/assets/icons/youtube.svg" alt="View on YouTube" /></a>
+                    <a class="github-button" href="https://github.com/DotEye/Adverswordle" target="_blank">Source Code <img width="15" height="15" src="/assets/icons/github.svg" alt="View on GitHub" /></a>
                 </div>
             </div>
             <div class="navigation-buttons">
@@ -124,48 +136,52 @@
         <h1>More soon...</h1>
         <p>Follow here to stay up to date:</p>
         <div class="actions">
-            <a href="https://www.youtube.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="assets/social/youtube.svg" alt="YouTube" /></a>
-            <a href="https://www.tiktok.com/@doteyeonline" target="_blank"><img width="25" height="25" src="assets/social/tiktok.svg" alt="TikTok" /></a>
-            <a href="https://discord.gg/tykwEuuYCt" target="_blank"><img width="25" height="25" src="assets/social/discord.svg" alt="Discord" /></a>
-            <a href="https://reddit.com/u/DotEyeOnline" target="_blank"><img width="25" height="25" src="assets/social/reddit.svg" alt="Reddit" /></a>
-            <a href="https://twitter.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="assets/social/x.svg" alt="X" /></a>
-            <a href="https://github.com/DotEye" target="_blank"><img width="25" height="25" src="assets/social/github.svg" alt="GitHub" /></a>
+            <a href="https://www.youtube.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="/assets/social/youtube.svg" alt="YouTube" /></a>
+            <a href="https://www.tiktok.com/@doteyeonline" target="_blank"><img width="25" height="25" src="/assets/social/tiktok.svg" alt="TikTok" /></a>
+            <a href="https://discord.gg/tykwEuuYCt" target="_blank"><img width="25" height="25" src="/assets/social/discord.svg" alt="Discord" /></a>
+            <a href="https://reddit.com/u/DotEyeOnline" target="_blank"><img width="25" height="25" src="/assets/social/reddit.svg" alt="Reddit" /></a>
+            <a href="https://twitter.com/DotEyeOnline" target="_blank"><img width="25" height="25" src="/assets/social/x.svg" alt="X" /></a>
+            <a href="https://github.com/DotEye" target="_blank"><img width="25" height="25" src="/assets/social/github.svg" alt="GitHub" /></a>
         </div>
         <a href="/privacy">Privacy Policy</a>
     </div>
 </footer>
 
 <script>
-    const IFRAME_HTML = `
-        <img src="assets/videos/preview_tohse.webp" width="100%" height="100%" alt="Towers of Hanoi - Speedrun Edition" />
-        <img src="assets/videos/preview_mclob.webp" width="100%" height="100%" alt="Minecraft Library of Babel" />
-        <img src="assets/videos/preview_adverswordle.webp" width="100%" height="100%" alt="Adverswordle" />
+    const WEBP_HTML = `
+        <img src="/assets/videos/preview_tohse.webp" width="100%" height="100%" alt="Towers of Hanoi - Speedrun Edition" />
+        <img src="/assets/videos/preview_mclob.webp" width="100%" height="100%" alt="Minecraft Library of Babel" />
+        <img src="/assets/videos/preview_adverswordle.webp" width="100%" height="100%" alt="Adverswordle" />
     `;
-    const BACKGROUND_IMAGES = ['1x1.png', 'bg_tohse.jpg', 'bg_mclob.jpg', 'bg_adverswordle.jpg', '1x1.png'];
+    const BACKGROUND_IMAGES = ['default.png', 'bg_tohse.jpg', 'bg_mclob.jpg', 'bg_adverswordle.jpg', 'default.png'];
 
     const backgroundElement = document.querySelector('.background');
+    const eyeWrapperElement = document.querySelector('.eye-wrapper');
     const eyeElement = document.querySelector('.eye');
     const scrollTargetElements = document.querySelectorAll('.scroll-target');
 
     let videoElements = eyeElement.querySelectorAll('video');
 
     function getScrollIndex() {
-        return Math.min(Math.floor(0.5 + window.scrollY / window.innerHeight), scrollTargetElements.length - 1);
+        return Math.min(Math.floor(0.5 + window.scrollY / backgroundElement.clientHeight), scrollTargetElements.length - 1);
     }
 
     window.addEventListener('scroll', () => {
         const scrollIndex = getScrollIndex();
 
-        backgroundElement.style.backgroundImage = `url("assets/backgrounds/${BACKGROUND_IMAGES[scrollIndex]}")`;
+        backgroundElement.style.backgroundImage = `url("/assets/backgrounds/${BACKGROUND_IMAGES[scrollIndex]}")`;
         videoElements.forEach(videoElement => {
             videoElement.style.opacity = '0';
             videoElement.pause?.();
         });
 
+        eyeWrapperElement.className = 'eye-wrapper';
+
         if (scrollIndex === 0 || scrollIndex > videoElements.length) return;
 
         videoElements[scrollIndex - 1].style.opacity = '1';
         videoElements[scrollIndex - 1].play?.();
+        eyeWrapperElement.className += ' rotated';
     });
 
     function smoothScroll(element) {
@@ -190,7 +206,7 @@
 
     if (isIOS) {
         console.log('iOS Detected. Autoplaying videos are not supported. Falling back to webp.');
-        eyeElement.innerHTML = IFRAME_HTML;
+        eyeElement.innerHTML = WEBP_HTML;
         videoElements = eyeElement.querySelectorAll('img');
     }
 </script>
