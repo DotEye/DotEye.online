@@ -36,6 +36,9 @@
         <div class="eye-background"></div>
         <div class="eye-background"></div>
         <div class="eye">
+            <video id="gotm-video" width="100%" height="100%" loop muted playsinline poster="/assets/thumbnails/gotm_thumb.jpg">
+                <source src="/assets/videos/preview_gotm.webm" type="video/webm">
+            </video>
             <video id="tohse-video" width="100%" height="100%" loop muted playsinline poster="/assets/thumbnails/tohse_thumb.jpg">
                 <source src="/assets/videos/preview_tohse.webm" type="video/webm">
             </video>
@@ -74,6 +77,23 @@
     </div>
 </header>
 <main>
+    <div class="scroll-target">
+        <div class="project" itemscope itemtype="https://schema.org/VideoGame">
+            <div class="card">
+                <h2 itemprop="name">Game of the Month 2025</h2>
+                <p itemprop="description">A collection of twelves games created and published throughout 2025. Each game is simple, unique, and has an OST.</p>
+                <div class="actions">
+                    <a class="goto-button" href="https://gotm.doteye.online" target="_blank">Launch <img width="15" height="15" src="/assets/icons/rocket.svg" alt="Launch" /></a>
+                    <a class="youtube-button" href="https://www.youtube.com/shorts/1VyKSb_MNOY" target="_blank">Trailer <img width="15" height="15" src="/assets/icons/youtube.svg" alt="View on YouTube" /></a>
+                    <a class="github-button" href="https://github.com/DotEye/Game-of-the-Month-2025" target="_blank">Source Code <img width="15" height="15" src="/assets/icons/github.svg" alt="View on GitHub" /></a>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button onclick="previousProject()">Prev</button>
+                <button onclick="nextProject()">Next</button>
+            </div>
+        </div>
+    </div>
     <div class="scroll-target">
         <div class="project" itemscope itemtype="https://schema.org/VideoGame">
             <div class="card">
@@ -149,11 +169,12 @@
 
 <script>
     const WEBP_HTML = `
+        <img src="/assets/videos/preview_gotm.webp" width="100%" height="100%" alt="Game of the Month" />
         <img src="/assets/videos/preview_tohse.webp" width="100%" height="100%" alt="Towers of Hanoi - Speedrun Edition" />
         <img src="/assets/videos/preview_mclob.webp" width="100%" height="100%" alt="Minecraft Library of Babel" />
         <img src="/assets/videos/preview_adverswordle.webp" width="100%" height="100%" alt="Adverswordle" />
     `;
-    const BACKGROUND_IMAGES = ['default.png', 'bg_tohse.jpg', 'bg_mclob.jpg', 'bg_adverswordle.jpg', 'default.png'];
+    const BACKGROUND_IMAGES = ['default.png', 'bg_gotm.jpg', 'bg_tohse.jpg', 'bg_mclob.jpg', 'bg_adverswordle.jpg', 'default.png'];
 
     const backgroundElement = document.querySelector('.background');
     const eyeWrapperElement = document.querySelector('.eye-wrapper');
