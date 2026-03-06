@@ -95,6 +95,11 @@ a img, button img {
     color: white;
 }
 
+.music-button {
+    background-color: #0da326;
+    color: white;
+}
+
 .actions {
     display: flex;
     margin-top: 15px;
