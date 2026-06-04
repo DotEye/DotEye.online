@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap">
     <link rel="stylesheet" href="/assets/styles/index.css">
     <link rel="preload" as="image" href="/assets/backgrounds/default.png">
+    <link rel="preload" as="image" href="/assets/backgrounds/bg_gotm.jpg">
     <link rel="preload" as="image" href="/assets/backgrounds/bg_tohse.jpg">
     <link rel="preload" as="image" href="/assets/backgrounds/bg_mclob.jpg">
     <link rel="preload" as="image" href="/assets/backgrounds/bg_adverswordle.jpg">
@@ -30,7 +31,12 @@
     </script>
 </head>
 <body>
-<div class="background"></div>
+<div class="background" style="background-image: url('/assets/backgrounds/default.png'); opacity: 1;"></div>
+<div class="background" style="background-image: url('/assets/backgrounds/bg_gotm.jpg'); opacity: 0;"></div>
+<div class="background" style="background-image: url('/assets/backgrounds/bg_tohse.jpg'); opacity: 0;"></div>
+<div class="background" style="background-image: url('/assets/backgrounds/bg_mclob.jpg'); opacity: 0;"></div>
+<div class="background" style="background-image: url('/assets/backgrounds/bg_adverswordle.jpg'); opacity: 0;"></div>
+<div class="background" style="background-image: url('/assets/backgrounds/default.png'); opacity: 0;"></div>
 <aside>
     <div class="eye-wrapper">
         <div class="eye-background"></div>
@@ -179,7 +185,7 @@
     `;
     const BACKGROUND_IMAGES = ['default.png', 'bg_gotm.jpg', 'bg_tohse.jpg', 'bg_mclob.jpg', 'bg_adverswordle.jpg', 'default.png'];
 
-    const backgroundElement = document.querySelector('.background');
+    const backgroundElements = document.querySelectorAll('.background');
     const eyeWrapperElement = document.querySelector('.eye-wrapper');
     const eyeElement = document.querySelector('.eye');
     const scrollTargetElements = document.querySelectorAll('.scroll-target');
@@ -187,13 +193,15 @@
     let videoElements = eyeElement.querySelectorAll('video');
 
     function getScrollIndex() {
-        return Math.min(Math.floor(0.5 + window.scrollY / backgroundElement.clientHeight), scrollTargetElements.length - 1);
+        return Math.min(Math.floor(0.5 + window.scrollY / backgroundElements[0].clientHeight), scrollTargetElements.length - 1);
     }
 
     window.addEventListener('scroll', () => {
         const scrollIndex = getScrollIndex();
 
-        backgroundElement.style.backgroundImage = `url("/assets/backgrounds/${BACKGROUND_IMAGES[scrollIndex]}")`;
+        backgroundElements.forEach((element, index) => {
+            element.style.opacity = index === scrollIndex ? '1' : '0';
+        });
         videoElements.forEach(videoElement => {
             videoElement.style.opacity = '0';
             videoElement.pause?.();
@@ -233,6 +241,9 @@
         eyeElement.innerHTML = WEBP_HTML;
         videoElements = eyeElement.querySelectorAll('img');
     }
+
+    // Trigger scroll handler on initial load to show correct background & media
+    window.dispatchEvent(new Event('scroll'));
 </script>
 </body>
 </html>
